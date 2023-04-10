@@ -2,10 +2,9 @@ const path = require('path');
 
 const resxData = require('./resx-parse');
 
-const filePath = __filename;
-const fileName = path.basename(filePath);
+const fileName = path.basename(__filename);
 
-function generateHomePageHTML(lang) {
+function generateHomePageHTML(lang) { // 言語に合わせてHTMlを生成
     const html = `
     <!DOCTYPE html>
     <html>
@@ -21,6 +20,6 @@ function generateHomePageHTML(lang) {
     return html;
 }
 
-console.log(`Loading complete : ${fileName}`);
+console.log(`Loading complete : ${fileName}`); // このファイル全体の読み込みが終了
 
 module.exports = generateHomePageHTML;
